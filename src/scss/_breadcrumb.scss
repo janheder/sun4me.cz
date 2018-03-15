@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    BREADCRUMB
+\*------------------------------------*/
+
+.breadcrumb{
+    margin:0;
+    background: $gray-light;
+    padding: 0;
+    height: 46px;
+    z-index: 1;
+    position: relative;
+}
+.breadcrumb-container{
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+}
+.breadcrumb-item{     
+    font-size: 1.3rem;  
+    color: $gray-dark-black;
+    font-weight: 400;
+    padding-left: 26px;
+    position: relative;
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+
+    + .breadcrumb-item::before{
+        content: "";
+        height: 6px;
+        width: 6px;
+        display: block;
+        @include center(vertical);
+        left: 8px;
+        padding: 0;
+        border-top: 1px solid $gray-dark-black;
+        border-right: 1px solid $gray-dark-black;
+        @include transform(translate(0, -35%) rotate(45deg));
+        @include transition(0.3s all ease);
+    }
+    &:first-child{
+        padding: 0;
+    }
+    &.active{
+        color: $gray-dark-black;
+        opacity: 0.8;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .breadcrumb{
+        display: none;
+    }
+}

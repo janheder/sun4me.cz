@@ -1,0 +1,112 @@
+/*------------------------------------*\
+     NUMBER STEPPER
+\*------------------------------------*/
+
+.number-stepper{
+    position: relative;
+    z-index: 1;
+
+    &::after{
+        content: "";
+        @include absolute-position(0,0,0,0);
+        border: 1px solid $border-grey;
+        z-index: -1;
+        background: $white;
+        border-radius: $border-radius-main;
+    }
+}
+.number-stepper__input{
+        border: 0;
+        width: 100%;
+        height: 5rem;
+        font-size: 1.4rem;
+        text-align: center;
+        background: transparent;
+        font-weight: 500;
+}
+.number-stepper__btn-up, .number-stepper__btn-down{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 100%;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    border: 1px solid $border-grey;
+    z-index: 2;
+    cursor: pointer;
+}
+.number-stepper__btn-up{
+    right: 0;
+    left: auto;
+    border-top-right-radius: $border-radius-main;
+    border-bottom-right-radius: $border-radius-main;
+}
+.number-stepper__btn-down{
+    border-top-left-radius: $border-radius-main;
+    border-bottom-left-radius: $border-radius-main;
+}
+.number-stepper__icon-up, .number-stepper__icon-down{
+    width: 10px;
+    height: 2px;
+    background: $dark-grey;
+    @include center(both);
+}
+.number-stepper__icon-up::after{
+    content: "";
+    width: 2px;
+    height: 10px;
+    background: $dark-grey;
+    @include center(both);
+}
+
+
+.number-stepper--small{
+
+    & .number-stepper__input{
+        border: 0;
+        width: 100%;
+        height: 4rem;
+        font-size: 1.4rem;
+        text-align: center;
+        background: transparent;
+    }
+    & span{
+        position: absolute;
+    }
+    & .number-stepper__btn-up, & .number-stepper__btn-down{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 100%;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        border: 1px solid $border-grey;
+        z-index: 2;
+        cursor: pointer;
+
+        & span{
+            width: 8px;
+            height: 2px;
+            background: $dark-grey;
+            @include center(both);
+        }
+    }
+    & .number-stepper__btn-up{
+        right: 0;
+        left: auto;
+
+        & span{
+            &::after{
+                content: "";
+                width: 2px;
+                height: 8px;
+                background: $dark-grey;
+                @include center(both);
+            }
+        }
+    }
+}

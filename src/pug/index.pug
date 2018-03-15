@@ -1,0 +1,142 @@
+doctype html
+html(lang="en")
+    head
+        include _variables.pug  
+        meta(charset="utf-8")
+        meta(content="IE=edge" http-equiv="X-UA-Compatible")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        title #{title}
+        meta(content="index,follow,snippet,archive" name="robots")
+        meta(content=metaDescription name="description")
+        meta(content=metaKeywords lang="cs" name="keywords")
+        meta(content=metaAuthor name="author")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
+
+        link(rel="canonical" href=metaURL)
+        meta(property="og:locale" content="cs_CZ")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content=title)
+        meta(property="og:description" content=metaDescription)
+        meta(property="og:url" content=metaURL)
+        meta(property="og:site_name" content=metaSitename)
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:site" content=metaTwitterName)
+        meta(name="twitter:title" content=title)
+        meta(name="twitter:description" content=metaDescription)
+        meta(name="twitter:image" content=metaTwitterImg)
+        include _css-include.pug  
+    body
+        include _nav.pug
+        section.hero.post__image-container
+            img.lazy.post__featured-image(src=URLbase+"img/lazy/lazy-bg-hero.jpg" data-src=URLbase+"img/bg-hero.jpg" alt="#")
+            .container
+                h1.hero__heading Realizujeme fotovoltaické elektrárny pro domácí využití
+                p.hero__subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                a.btn.hero_button(href="#") Naše nabídka #[span.btn__icon.arrow-icon.white]
+                a.btn.btn-ghost-white(href="#") Kontakty
+
+        section.about
+            .container
+                .row
+                    .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                        img.lazy(src=URLbase+"img/img-about.jpg" data-src=URLbase+"img/img-about.jpg" alt="#" title="#")
+                    .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                        h2.about__title O nás
+                        p.about__subtitle Společnost sun4me s.r.o. se zaměřuje na realizaci fotovoltaických elektráren pro domácí využití nyní především v Moravskoslezském kraji. 
+                        p.about__subtitle Naše nabídka zahrnuje kompletní řešení: instalace fotovoltaické elektrárny na klíč, vyřízení dotace, připojení sestavy do distribuční sítě a taktéž záruční i pozáruční servis. 
+                        p.about__subtitle Při realizaci usilujeme o využívání nejkvalitnějších, nejefektivnějších a nejmodernějších technologií.
+                        a.btn.about__button(href="#") Více o společnosti #[span.btn__icon.arrow-icon.white]
+
+        section.product
+            .container
+                h2.product__title Nabídka fotovoltaických elektráren...
+                .row
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        .product-single
+                            .product-single__top
+                                h3.product-single__title SUN8-Výkon 2120 W
+                                h2.product-single__price 74 000 Kč
+                            .product-single__bottom
+                                .product-single__text-wrap
+                                    p.product-single__text Cena instalace: 139 000 Kč
+                                    p.product-single__text Výše dotace: 65 000 Kč
+                                .product-single__text-wrap
+                                    p.product-single__text.product-single__text--bold Zelená úsporám
+                                    p.product-single__text C 3.4.
+                                a.btn.btn-ghost-green(href="#") Více informací #[span.btn__icon.arrow-icon.green]
+
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        .product-single
+                            .product-single__top
+                                h3.product-single__title SUN8-Výkon 2120 W
+                                h2.product-single__price 74 000 Kč
+                            .product-single__bottom
+                                .product-single__text-wrap
+                                    p.product-single__text Cena instalace: 139 000 Kč
+                                    p.product-single__text Výše dotace: 65 000 Kč
+                                .product-single__text-wrap
+                                    p.product-single__text.product-single__text--bold Zelená úsporám
+                                    p.product-single__text C 3.4.
+                                a.btn.btn-ghost-green(href="#") Více informací #[span.btn__icon.arrow-icon.green]
+                                
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        .product-single
+                            .product-single__top
+                                h3.product-single__title SUN8-Výkon 2120 W
+                                h2.product-single__price 74 000 Kč
+                            .product-single__bottom
+                                .product-single__text-wrap
+                                    p.product-single__text Cena instalace: 139 000 Kč
+                                    p.product-single__text Výše dotace: 65 000 Kč
+                                .product-single__text-wrap
+                                    p.product-single__text.product-single__text--bold Zelená úsporám
+                                    p.product-single__text C 3.4.
+                                a.btn.btn-ghost-green(href="#") Více informací #[span.btn__icon.arrow-icon.green]
+                                
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        .product-single
+                            .product-single__top
+                                h3.product-single__title SUN8-Výkon 2120 W
+                                h2.product-single__price 74 000 Kč
+                            .product-single__bottom
+                                .product-single__text-wrap
+                                    p.product-single__text Cena instalace: 139 000 Kč
+                                    p.product-single__text Výše dotace: 65 000 Kč
+                                .product-single__text-wrap
+                                    p.product-single__text.product-single__text--bold Zelená úsporám
+                                    p.product-single__text C 3.4.
+                                a.btn.btn-ghost-green(href="#") Více informací #[span.btn__icon.arrow-icon.green]
+
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        .product-single
+                            .product-single__top
+                                h3.product-single__title SUN8-Výkon 2120 W
+                                h2.product-single__price 74 000 Kč
+                            .product-single__bottom
+                                .product-single__text-wrap
+                                    p.product-single__text Cena instalace: 139 000 Kč
+                                    p.product-single__text Výše dotace: 65 000 Kč
+                                .product-single__text-wrap
+                                    p.product-single__text.product-single__text--bold Zelená úsporám
+                                    p.product-single__text C 3.4.
+                                a.btn.btn-ghost-green(href="#") Více informací #[span.btn__icon.arrow-icon.green]
+                                
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        .product-single
+                            .product-single__top
+                                h3.product-single__title SUN8-Výkon 2120 W
+                                h2.product-single__price 74 000 Kč
+                            .product-single__bottom
+                                .product-single__text-wrap
+                                    p.product-single__text Cena instalace: 139 000 Kč
+                                    p.product-single__text Výše dotace: 65 000 Kč
+                                .product-single__text-wrap
+                                    p.product-single__text.product-single__text--bold Zelená úsporám
+                                    p.product-single__text C 3.4.
+                                a.btn.btn-ghost-green(href="#") Více informací #[span.btn__icon.arrow-icon.green]
+
+        include _news-section.pug
+        
+        include _footer.pug
+
+        include _js-include.pug

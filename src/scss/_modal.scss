@@ -1,0 +1,47 @@
+.modal-dialog {
+	background: $white;
+}
+.modal-content{
+    border-radius: $border-radius-main;
+    border: 0;
+}
+.modal-header{
+    position: relative;
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    padding: 20px;
+
+    .close{
+        margin: 0;
+        height: 100%;
+        padding: 10px;
+    }
+}
+.modal-title{
+    font-size: 3rem;
+    font-family: "Roboto Condensed";
+    font-weight: 600;
+    color: $gray-dark-black;
+}
+.modal-body{
+    padding: 20px;
+    .cart-item-single{
+        border: 0;
+    }
+}
+.modal-footer{
+    @include justify-content(flex-start);
+    padding: 20px;
+
+    & .btn:last-child{
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 800px;
+    }
+}

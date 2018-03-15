@@ -1,0 +1,209 @@
+footer{
+    background: $white;
+    padding: 0;
+    & .col{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/***** FOOTER CONTACTS *****/
+.footer-contacts{
+    position: relative;
+    z-index: 2;
+    padding: 9rem 0;
+    background: $brand-primary;
+    @include gradient(to right, $orange-main, $yellow-main); 
+}
+.footer-contacts__wrap{
+    @include flexbox();
+    @include flex-direction(row);
+}
+
+.footer-contacts__text{
+    position: relative;
+}
+.footer-contacts__title{
+    color: $white; 
+    font-size: 3rem;
+    line-height: 3.6rem;
+    max-width: 640px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    font-weight: 700;
+}
+.footer-contacts__p{
+    font-size: 1.5rem;
+    color: $white;
+    margin: 1rem 0 0 0;
+}
+.footer-contacts__button{
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(flex-end);
+}
+
+/***** FOOTER MAIN *****/
+.footer-main{
+    padding: 9rem 0;
+}
+.footer-main__h5{
+    font-size: 2.4rem;
+    color: $text-primary;
+    margin-bottom: 2rem;
+    margin-top: 0rem;
+    font-weight: 700;
+}
+.footer-main__link{
+    color: $gray-disabled;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+
+    &:hover, &:active, &:focus{
+        color: $text-primary;
+        text-decoration: underline;
+    }
+}
+.footer-main__text{
+    color: $text-primary;
+    max-width: 460px;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.footer-main__logo{
+    height: 42px;
+    margin-bottom: 4rem;
+}
+@media screen and (max-width:991px){
+    .footer-main__h5{
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+/*------------------------------------*\
+    FOOTER RESPONSIVE
+\*------------------------------------*/
+
+
+
+
+@media screen and (max-width:500px){
+    .footer-contacts{
+        @include transform(none);
+    }
+    .footer-contacts__wrap{
+        @include flex-direction(column);
+    }
+    .footer-contacts__single{
+        @include flex-basis(auto);
+        border-right: 0;
+        border-bottom: 1px solid $white-transparent;
+        @include align-items(flex-start);
+        padding: 10px 30px;
+    }
+    .footer-main{
+        margin-top: 0;
+    }
+}
+
+.scroll-to-top{
+    display: none;
+    position: fixed;
+    right: 3vw;
+    bottom: 3vw;
+    background: $gray-light;
+    padding: 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    z-index: 8;
+    @include transition(0.3s ease all);
+
+    &:hover{
+        @include box-shadow(0px,0,10px,$black-transparent-25);
+    }
+    & span{
+        height: 10px;
+        width: 10px;
+    }
+}
+@media screen and (max-width:1400px){
+    .scroll-to-top{
+        display: none;
+    }
+}
+
+/*------------------------------------*\
+    COYPRIGHT
+\*------------------------------------*/
+
+.copyright{
+    background: $white;
+    border-top: 1px solid $black-transparent;
+}
+.copyright__wrap{
+    border-top: 1px solid $white-transparent;
+    padding: 2.5rem 0;
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+}
+.copyright__h5{
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: $text-primary;
+    font-weight: 400;
+    @include flex-grow(1);
+}
+.copyright__link{
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: $brand-primary;
+    font-weight: 400;
+
+    &:hover, &:active, &:focus{
+        color: $text-primary;
+    }
+}
+.copyright__pull{
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: $text-primary;
+    font-weight: 400;  
+}
+.copyright__farm{
+    font-size: 13px;
+    color: $gray-text;
+}
+.copyright__farm-link{
+    font-size: 13px;
+    color: $text-primary;
+    font-weight: 400;
+
+    &:hover, &:active, &:focus{
+        color: $text-primary;
+    }
+}
+
+@media screen and (max-width:768px){
+    .copyright{
+        text-align: center;
+    }
+    .copyright__wrap{
+        @include flex-direction(column);
+    }
+    .copyright__pull{
+        float: right;
+        line-height: 1.8;
+    }
+    .copyright__farm{
+        display: none;
+    }
+}

@@ -1,0 +1,315 @@
+/*------------------------------------*\
+    NAVIGATION MAIN
+\*------------------------------------*/
+
+.navbar-main{
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    height: 110px;
+    @include transition(0.3s ease all);
+}
+.navbar-brand{
+    padding: 0;
+}
+.navbar-brand__img{
+    height: 42px;
+}
+.navbar-brand__img--scroll{
+    display: none;
+}
+.navbar__container{
+    height: 100%;
+    position: relative;
+}
+.navbar-collapse{
+    @include justify-content(flex-end);
+}
+.navbar-nav__link{
+    color: $white;
+    font-size: 1.7rem;
+
+    &:hover, &:active, &:focus{
+        color: $white;
+    }
+}
+.navbar-nav__icon{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.navbar-nav__item{
+    position: static;
+}
+
+/*------------------------------------*\
+    NAVIGATION DROPDOWNS
+\*------------------------------------*/
+
+.navbar-dropdown{
+    position: absolute;
+    top: 100px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: $border-radius-main;
+    left: 20px;
+    right: 20px;
+    @include box-shadow(0px,0,10px,$black-transparent-25);
+    @include transition(0.3s all ease);
+
+    &.show{
+        @include flexbox();
+        @include flex-direction(row);
+    }
+}
+.navbar-dropdown__item{
+    @include flexbox();
+    @include flex-direction(column);
+    @include flex-grow(1);
+    @include flex-basis(0);
+    text-align: center;
+    padding: 1.5rem 2rem;
+
+    &:hover, &:active, &:focus{
+        background: $gray-light;
+        color: $text-primary;
+    }
+}
+.navbar-dropdown__heading{
+    font-size: 1.6rem;
+    white-space: normal;
+    margin: 0;
+    padding-bottom: 1.5rem;
+}
+.navbar-dropdown__price{
+    margin: 0;
+    font-size: 2rem;
+    color: $brand-primary;
+    font-weight: 700;
+}
+
+#dark-overlay{
+    display: none;
+}
+
+/*------------------------------------*\
+    NAVIGATION MAIN DESKTOP
+\*------------------------------------*/
+
+@media screen and (min-width:992px){
+    .navbar-nav .nav-link.navbar-nav__link{
+        padding: 1rem 2.5rem;
+    }
+}
+
+/*------------------------------------*\
+    NAVIGATION MAIN RESPONSIVE
+\*------------------------------------*/
+
+@media screen and (max-width:991px){
+    /*
+    header::after{
+        content: "";
+        height: 50px;
+        width: 100%;
+        position: relative;
+        display: block;
+        top: 0;
+        left: 0;
+    }
+    */
+    .navbar-main{
+        height: 50px;
+        padding: 0;
+    }
+    .navbar-toggler{
+        width: 100px;
+        height: 100%;
+        padding: 0;
+        border: 0;
+        position: relative;
+    }
+    .navbar-toggler__icon{
+        left: 25%;
+    }
+    .navbar-toggler__text{
+        @include center(vertical);
+        right: 25%;
+        margin: 0;
+        font-size: 1.7rem;
+        color: $white;
+    }
+    .navbar-brand{
+        margin: 0;
+        margin-left: 20px;
+        height: 36px;
+    }
+    .navbar-brand__img{
+        height: 36px;
+    }
+    .navbar-nav .navbar-nav__link {
+        color: $gray-dark-black;
+        font-size: 1.7rem;
+        height: 56px;
+        padding: 0 20px;
+        @include flexbox();
+        @include flex-direction(row);
+        @include align-items(center);
+    }
+    .caret-icon.white {
+        border-top: 2px solid $gray-dark-black;
+        border-right: 2px solid $gray-dark-black;
+        height: 8px;
+        width: 8px;
+    }
+    .navbar-dropdown.show{
+        @include flexbox();
+        @include flex-direction(column);     
+        top: 0;
+        left: 0;
+        position: relative;  
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .navbar-dropdown__item{
+        display: block;
+    }
+    body.active {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        margin-left: -240px;
+    }
+    body.stop-scroll{
+        overflow: hidden;
+    }
+    header .navbar-collapse{
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        display: block;
+        @include translate(100%,0%);
+        height: 100% !important;
+        width: 240px;
+        @include transition(0.3s transform ease);
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: $gray-light;
+
+        & .navbar-toggler{
+            z-index: 2;
+            height: 100%;
+            width: 50px;
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            border:0;
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                border: 2px solid $white;
+                border-radius: 3px;
+                margin: 0;
+            }
+        }
+    }
+    .collapsing, body.active .collapse, body.active .collapsing {
+        @include translate(0%,0%);
+    }
+    .collapsing, body.active .collapsing {
+        overflow: hidden;
+    }
+    #dark-overlay.active{
+        display: block;
+        position: fixed;
+        height: 100%;
+        width:100%;
+        z-index: 8;
+        cursor: pointer;
+        background: rgba(0,0,0,0.75);
+    }
+}
+
+/*------------------------------------*\
+    NAVIGATION MAIN RESPONSIVE MOBILE
+\*------------------------------------*/
+
+@media screen and (max-width:500px){
+    nav.navbar{
+        padding:0;
+    
+        & .navbar-brand img{
+            height: 100%;
+        }
+    }
+}
+
+/*------------------------------------*\
+    NAVIGATION BUTTONS
+\*------------------------------------*/
+
+
+
+
+/*------------------------------------*\
+    NAVIGATION SCROLL
+\*------------------------------------*/
+
+.navbar-main.scroll{
+    background: $bg-primary;
+    @include box-shadow(0px,0,10px,$black-transparent-25);
+    height: 80px;
+
+    .navbar-brand__img{
+        display: none;
+    }
+    .navbar-brand__img--scroll{
+        display: block;
+    }
+    .navbar-nav__link{
+        color: $brand-primary;
+        font-size: 1.7rem;
+    
+        &:hover, &:active, &:focus{
+            color: $gray-dark-black;
+
+            & .navbar-nav__icon{
+                border-top: 2px solid $gray-dark-black;
+                border-right: 2px solid $gray-dark-black;  
+            }
+        }
+    }
+    .navbar-toggler__icon, .navbar-toggler__icon::before, .navbar-toggler__icon::after{
+        background: $gray-dark-black;
+    }
+    .navbar-toggler[aria-expanded="true"] .hamburger-icon {
+        background: transparent;
+    }
+    .navbar-toggler__text{
+        color: $gray-dark-black;
+    }
+    .navbar-nav__icon{
+        border-top: 2px solid $brand-primary;
+        border-right: 2px solid $brand-primary;
+
+    }
+    .navbar-dropdown{
+        top: 80px;
+    }
+}
+
+@media screen and (max-width:991px){
+    .navbar-main.scroll{
+        height: 50px;
+    }  
+}

@@ -1,0 +1,72 @@
+doctype html
+html(lang="en")
+    head
+        include _variables.pug  
+        meta(charset="utf-8")
+        meta(content="IE=edge" http-equiv="X-UA-Compatible")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        title #{title}
+        meta(content="index,follow,snippet,archive" name="robots")
+        meta(content=metaDescription name="description")
+        meta(content=metaKeywords lang="cs" name="keywords")
+        meta(content=metaAuthor name="author")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
+
+        link(rel="canonical" href=metaURL)
+        meta(property="og:locale" content="cs_CZ")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content=title)
+        meta(property="og:description" content=metaDescription)
+        meta(property="og:url" content=metaURL)
+        meta(property="og:site_name" content=metaSitename)
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:site" content=metaTwitterName)
+        meta(name="twitter:title" content=title)
+        meta(name="twitter:description" content=metaDescription)
+        meta(name="twitter:image" content=metaTwitterImg)
+        include _css-include.pug  
+    body
+        include _nav.pug
+        section.page-heading.page-heading-post.post__image-container
+            .container
+                h1.page-heading__title Nejnovější aktuality
+            img.lazy.post__featured-image(src=URLbase+"img/lazy/lazy-thumb-page-archive-large.jpg" data-src=URLbase+"img/thumb-page-archive-large.jpg" alt="#" title="#")
+
+        include _breadcrumb.pug
+
+        main
+            .container
+                .row
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        include _news-single.pug
+
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        include _news-single.pug
+
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        include _news-single.pug
+                        
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        include _news-single.pug
+
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        include _news-single.pug
+                        
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        include _news-single.pug
+
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        include _news-single.pug
+                        
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        include _news-single.pug
+
+                    .col-12.col-sm-12.col-md-6.col-lg-4.col-xl-4
+                        include _news-single.pug
+
+                include _pagination.pug
+
+
+        include _footer.pug
+
+        include _js-include.pug

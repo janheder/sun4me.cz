@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    NEWS SINGLE
+\*------------------------------------*/
+
+.news-single{
+    color: $white;
+    position: relative;
+    margin: 10px 0;
+    width: 100%;
+    display: block;
+
+    &:hover, &:active, &:focus{
+        color: $white;
+        
+    }
+}
+.news-single__thumbnail{
+    z-index: 0;
+}
+.news-single__top{
+    position: relative;
+    min-height: 180px;
+    overflow: hidden;
+    border-radius: $border-radius-main;
+}
+.news-single__bottom{
+    padding: 10px 0;
+}
+.news-single__title{
+    font-size: 2rem;
+    margin-bottom: 5px;
+    line-height: 1.3;
+    color: $brand-primary;
+}
+.news-single__date{
+    color: $gray-disabled;
+    font-size: 1.5rem;
+}

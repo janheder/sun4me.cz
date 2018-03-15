@@ -1,0 +1,207 @@
+/*------------------------------------*\
+    ARTICLE
+\*------------------------------------*/
+
+main article{
+    margin: 0 auto;
+    padding: 0rem;
+    display: block;
+    background: $bg-primary;
+}
+@media screen and (max-width:575px){
+    main article{
+        padding: 4rem 0rem;
+        background: $white;
+    }
+}
+
+article{
+    & p, & b, & i, & u, & strong{
+        line-height: 3rem;
+        font-size: 1.6rem;
+        display: inline-block;
+        font-weight: 400;
+    }
+    & > p, & > b, & > i, & > u, & > strong{
+        margin-bottom: 3rem;
+    }
+    & b, & strong{
+        font-weight: 700;
+    }
+    & p{
+        margin-bottom: 3rem;
+    }
+    & p:last-child{
+        margin-bottom: 0rem;
+    }
+}
+
+/*------------------------------------*\
+    ARTICLE POST
+\*------------------------------------*/
+
+article.post{
+    & p, & b, & i, & u, & a, & strong{
+        font-family: $font-family-main;
+        line-height: 3.4rem;
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+    & b, & strong{
+        font-weight: 700;
+    }
+    & .article-bottom{
+        border-top: 1px solid $black-transparent;
+        padding-top: 4rem;
+        margin-top: 4rem;
+
+        & a{
+            font-size: 1.6rem;
+            line-height: 1.2;
+            font-weight: 500;
+        }
+    } 
+}
+article{
+    &.post {
+        @for $index from 1 through 6 {
+          & h#{$index}{
+            line-height: 1.5;
+            font-weight: 600;
+            font-family: $font-family-alt;
+          }
+        }
+        & h1{
+            font-size: 3.6rem;
+        }
+        & h2{
+            font-size: 3rem;
+        }
+        & h3{
+            font-size: 2.4rem;
+        }
+        & h4{
+            font-size: 2rem;
+        }
+        & h5{
+            font-size: 1.8rem;
+        }
+        & h6{
+            font-size: 1.6rem;
+        }
+    }
+}
+
+/*------------------------------------*\
+    ARTICLE ELEMENT STYLES
+\*------------------------------------*/
+
+.post-back-btn{
+	margin-top: 4rem;
+}
+
+.page-contact__col{
+	margin: 2rem 0;
+}
+.page-contact__title{
+    font-size: 2.4rem;
+    font-family: $font-family-alt;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        background: $orange-main;
+        width: 50px;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+    }
+}
+.page-contact__bold, .page-contact__text{
+    display: block;
+    margin-bottom: 1rem; 
+
+}
+
+
+.page-contact__map{
+	margin: 2rem 0;
+}
+.page-contact__img{
+	display: block;
+	text-align: center;
+}
+
+@media screen and (max-width:575px){
+	.page-contact__col{
+		margin: 0 0 4rem 0;
+	}
+}
+
+
+.order-history{
+    & h3{
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid #2b2f30;
+        margin: 0;
+        margin-bottom: 2.5rem;
+        font-size: 2.25rem;
+    }
+    & .login-form-toggler{
+        display: none;
+    }
+    & .order-history-single-wrap{
+        display: table;
+        width: 100%;
+    }
+    & .order-history-single{
+        display: table-row;
+
+        &.head p{
+            font-weight: 600;
+        }
+        & .order-history-single-col{
+            display: table-cell;
+            padding: 10px;
+            max-width: 200px;
+            border-bottom: 1px solid $border-primary;
+            & a{
+                display: block;
+            }
+            & p{
+                margin: 0;
+                line-height: 1.5;
+                margin: 5px 0;
+            }
+            & .price{
+                color: $red-main;
+                font-weight: 600;
+            }
+            & .status{
+                color: $green-main;
+                font-weight: 600;
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px){
+    .order-history{
+        & h3{
+            display: none;
+        }
+        & .login-form-toggler{
+            display: block;
+            width: 100%;
+                margin: 10px 0;
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .order-history .collapse {
+        display: block;
+    }
+}

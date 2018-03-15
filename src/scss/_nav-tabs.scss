@@ -1,0 +1,30 @@
+/*------------------------------------*\
+     NAV TABS
+\*------------------------------------*/
+
+.nav-tabs{ 
+    & .nav-item{
+        & .nav-link{
+            min-height: 46px;
+            @include flexbox();
+            @include align-items(center);
+            @include flex-direction(row);
+            padding: 10px 2rem;
+            color: $gray-dark-black;
+            background: $gray-light;
+            border: 1px solid $border-primary;
+            border-radius: 0;
+
+            &.active{
+                background: transparent;
+                border-bottom-color: $white;
+            }
+        }
+        &:first-child .nav-link.active{
+            border-right-color: transparent;
+        }
+        &:last-child .nav-link.active{
+            border-left-color: transparent;
+        }
+    }
+}

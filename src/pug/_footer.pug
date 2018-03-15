@@ -1,0 +1,63 @@
+a.scroll-to-top(href="#dark-overlay")
+    span.caret-icon.top
+
+footer
+    section.footer-contacts.post__image-container
+        img.lazy.post__featured-image(src=URLbase+"img/lazy/lazy-bg-footer-contacts.jpg" data-src=URLbase+"img/bg-footer-contacts.jpg" alt="#")
+        .container.footer-contacts__container
+            h3.footer-contacts__title Neváhejte nás kontaktovat a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            form(action="" method="post")
+                .row
+                    .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                        .form-group
+                            label(for="register_form_name") Jméno a příjmení
+                            input.form-control(type="text" name="register_form_name" id="register_form_name" autocomplete="name" required)
+                    .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                        .form-group
+                            label(for="register_form_email") Emailová adresa
+                            input.form-control(type="email" name="register_form_email" id="register_form_email" autocomplete="email" required)
+                    .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                        .form-group
+                            label(for="register_form_tel") Telefonní číslo #[span (nepovinné)]
+                            input.form-control(type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel")
+                    .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                        .form-group
+                            label(for="route") Ulice
+                            input.form-control(type="text" name="register-form-route" id="route" autocomplete="street-address" required)
+                    .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
+                        .form-group
+                            label(for="route") Text zprávy
+                            textarea.form-control(type="text" rows="4" name="register-form-route" id="route" required)
+                .footer-contacts__button
+                    button.btn(type="submit") Nezávazná konzultace #[span.btn__icon.arrow-icon.white]
+
+    section.footer-main
+        .container
+            .row
+                .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                    img.footer-main__logo(src=URLbase+"images/logo.svg" title="#" alt="#")
+                    p.footer-main__text Společnost sun4me s.r.o. se zaměřuje na realizaci fotovoltaických elektráren pro domácí využití nyní především v Moravskoslezském kraji. Jsme přesvědčeni, že Vám nabízíme dokonalý zdroj energie pro Váš dům.
+
+                .col-12.col-sm-6.col-md-3.col-lg-3.col-xl-3
+                    h5.footer-main__h5 Navigace
+                    a.footer-main__link(href="#") Hlavní strana
+                    a.footer-main__link(href="#") O nás
+                    a.footer-main__link(href="#") Fotovoltaické elektrárny
+                    a.footer-main__link(href="#") Aktuality
+                    a.footer-main__link(href="#") Kontakty
+
+                .col-12.col-sm-6.col-md-3.col-lg-3.col-xl-3
+                    h5.footer-main__h5 Kontakty
+                    p.footer-main__text sun4me s.r.o.
+                    p.footer-main__text Místecká 329/258
+                    p.footer-main__text 720 00 Ostrava
+                    p.footer-main__text +420 704 538 399
+                    p.footer-main__text info@sun4me.cz
+
+
+
+section.copyright
+    .container.copyright__container
+        .copyright__wrap
+            h5.copyright__h5 Copyright © 2018 #[a.copyright__link(href=metaURL) #{metaSitename}] Všechna práva vyhrazena.
+            h5.copyright__pull Vytvořeno v #[a.copyright__link(href=metaAuthorURL) #{metaAuthor}]

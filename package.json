@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.23.5",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.12.1",
+    "gulp-uglify": "^3.0.0",
+    "pug": "^2.0.0-rc.4",
+    "pump": "^2.0.1"
+  },
+  "name": "sun4me",
+  "version": "1.0.0",
+  "main": "index.html",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

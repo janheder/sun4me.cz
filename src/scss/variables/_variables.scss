@@ -1,0 +1,58 @@
+// Descriptive Colors
+$white: #FFFFFF;
+$gray-light: #F5F5F5;
+$gray-medium: #414141;
+$gray-border: #E5E5E5;
+$gray-text: #BBBBBB;
+$gray-disabled: #5A5A5A;
+$gray-dark: #2B2F30;
+$gray-dark-black: #222222;
+
+$black: #000000;
+$orange-main-dark: #F92F06;
+$red-main: #C50000;
+$red-main-dark: #B00000;
+$brown: #43312E;
+$red: #E30016;
+
+$orange-main: #FF823C;
+$orange-alt: #FF673C;
+$yellow-main: #FFB146;
+$green-main: #7CBD1E;
+$green-light: #88CF21;
+
+$black-transparent: rgba(0,0,0,0.1);
+$black-transparent-25: rgba(0,0,0,0.25);
+$black-transparent-50: rgba(0,0,0,0.5);
+
+$white-transparent: rgba(255,255,255,0.1);
+
+// Main Colors
+$brand-primary: $orange-main;
+$brand-alt: $yellow-main; 
+
+$button-primary: $green-main;
+$button-primary-hover: $green-light;
+
+$button-ghost: $gray-dark-black;
+
+$text-primary: $gray-dark-black;
+$text-light: $gray-text;
+
+$border-primary: $gray-border;
+
+$bg-primary: $white;
+$bg-alt: $gray-light;
+
+//main gradient
+
+
+
+// Border radius
+$border-radius-main: 5px;
+$border-radius-button: 2.7rem;
+
+// Font family
+$font-family-main: "Cabin", sans-serif;
+$font-family-alt: "Cabin", sans-serif;
+$font-family-system: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;

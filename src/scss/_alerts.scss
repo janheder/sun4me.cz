@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    ALERTS
+\*------------------------------------*/
+
+.alert{
+    background: $gray-dark-black;
+    padding: 2rem;
+    color: $white;
+    display: block;
+    margin-bottom: 3rem;
+    border-radius: $border-radius-main;
+    border: 0;
+}
+.alert-success{
+    background: $green-main;
+}
+.alert-info{
+    background: $gray-dark-black;
+}
+.alert-warning{
+    background: $yellow-main;
+}
+.alert-danger{
+    background: $red-main;
+}

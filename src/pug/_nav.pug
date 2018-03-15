@@ -1,0 +1,45 @@
+header
+	nav.navbar.navbar-expand-lg.navbar-main
+		.container.navbar__container
+			a.navbar-brand(href="#")
+				img.navbar-brand__img(src=URLbase+"images/logo-white.svg" title="#" alt="#")
+				img.navbar-brand__img.navbar-brand__img--scroll(src=URLbase+"images/logo.svg" title="#" alt="#")
+
+			.navbar-toggler(aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-toggle="collapse" data-target="#navbarNav" role="button")
+				span.hamburger-icon.navbar-toggler__icon
+				p.navbar-toggler__text Menu	
+
+			.collapse.navbar-collapse(id="navbarNav")
+				ul.navbar-nav
+					li.nav-item.navbar-nav__item
+						a.nav-link.navbar-nav__link(href="#") O nás
+					li.nav-item.dropdown.navbar-nav__item
+						a.nav-link.navbar-nav__link.dropdown-toggle(href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Fotovoltaické elektrárny #[span.caret-icon.white.navbar-nav__icon]
+						.dropdown-menu.navbar-dropdown(aria-labelledby="navbarDropdownMenuLink")
+							a.dropdown-item.navbar-dropdown__item(href="#")
+								h5.navbar-dropdown__heading SUN8-VÝKON 2120 W
+								p.navbar-dropdown__price 74 000 Kč
+							a.dropdown-item.navbar-dropdown__item(href="#")
+								h5.navbar-dropdown__heading SUN8-VÝKON 2120 W
+								p.navbar-dropdown__price 74 000 Kč
+							a.dropdown-item.navbar-dropdown__item(href="#")
+								h5.navbar-dropdown__heading SUN8-VÝKON 2120 W
+								p.navbar-dropdown__price 74 000 Kč
+							a.dropdown-item.navbar-dropdown__item(href="#")
+								h5.navbar-dropdown__heading SUN8-VÝKON 2120 W
+								p.navbar-dropdown__price 74 000 Kč
+							a.dropdown-item.navbar-dropdown__item(href="#")
+								h5.navbar-dropdown__heading SUN8-VÝKON 2120 W
+								p.navbar-dropdown__price 74 000 Kč
+							a.dropdown-item.navbar-dropdown__item(href="#")
+								h5.navbar-dropdown__heading SUN8-VÝKON 2120 W
+								p.navbar-dropdown__price 74 000 Kč
+
+
+					li.nav-item.navbar-nav__item
+						a.nav-link.navbar-nav__link(href="#") Aktuality
+					li.nav-item.navbar-nav__item
+						a.nav-link.navbar-nav__link(href="#") Kontakty
+			
+
+	span(id="dark-overlay" aria-label="Toggle navigation" data-target="#navbarNav" data-toggle="collapse")

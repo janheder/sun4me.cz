@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+    head
+        include _variables.pug  
+        meta(charset="utf-8")
+        meta(content="IE=edge" http-equiv="X-UA-Compatible")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        title #{title}
+        meta(content="index,follow,snippet,archive" name="robots")
+        meta(content=metaDescription name="description")
+        meta(content=metaKeywords lang="cs" name="keywords")
+        meta(content=metaAuthor name="author")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
+
+        link(rel="canonical" href=metaURL)
+        meta(property="og:locale" content="cs_CZ")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content=title)
+        meta(property="og:description" content=metaDescription)
+        meta(property="og:url" content=metaURL)
+        meta(property="og:site_name" content=metaSitename)
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:site" content=metaTwitterName)
+        meta(name="twitter:title" content=title)
+        meta(name="twitter:description" content=metaDescription)
+        meta(name="twitter:image" content=metaTwitterImg)
+        include _css-include.pug  
+    body
+        include _nav.pug
+        section.page-heading.post__image-container
+            .container
+                h1.page-heading__title Lorem ipsum dolor sit amet
+            img.lazy.post__featured-image(src=URLbase+"img/lazy/lazy-news-thumb-large.jpg" data-src=URLbase+"img/news-thumb-large.jpg" alt="#" title="#")
+
+        include _breadcrumb.pug
+
+        main
+            .container
+                .print-area
+                    article.post
+                        h1 Nadpis H1
+                        h2 Nadpis H2
+                        h3 Nadpis H3
+                        h4 Nadpis H4
+                        h5 Nadpis H5
+                        h6 Nadpis H6
+                        p Chcete nám sdělit ještě nějakou důležitou zprávu k vaší objednávce? Využijte prosím, tohoto formuláře. Napsat do něj můžete také upřesňující informace o místě, kam máme Vaše zboží doručit (nejbližší orientační bod apod.)
+                        strong Chcete nám sdělit ještě nějakou důležitou zprávu k vaší objednávce? Využijte prosím, tohoto formuláře.
+
+                        h4 Seznam
+                        ul
+                            li lorem
+                            li ipsum
+
+
+                        h4 Tabulky
+                        table.table
+                            tr
+                                th Po - Pá
+                                td 9:00 - 17:00
+                            tr
+                                th Po - Pá
+                                td 9:00 - 17:00
+
+                        a(href="#") Normální odkaz
+
+                        img(src=URLbase+"img/news-thumb-large.jpg" alt="#" title="#")
+
+        include _news-section.pug
+        
+        include _footer.pug
+
+        include _js-include.pug

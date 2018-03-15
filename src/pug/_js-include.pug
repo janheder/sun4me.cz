@@ -1,0 +1,65 @@
+// Popper for Bootstrap support
+script(src="https://unpkg.com/popper.js/dist/umd/popper.min.js")
+script(src=URLbase+"js/popper.min.js")
+
+// Bootstrap core JavaScript
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+script.
+	if(typeof($.fn.modal) === 'undefined') {
+	document.write('<script src="#{URLbase}js/bootstrap.min.js">\x3C/script>')}
+
+// FontAwesome 5
+script(src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
+script(src=URLbase+"js/fontawesome-all.min.js")
+
+
+// Custom js libraries
+
+
+// Custom js plugins and scripts
+script(src=URLbase+"js/all.min.js")
+
+
+.pswp(tabindex="-1" role="dialog" aria-hidden="true")
+
+	.pswp__bg
+
+	.pswp__scroll-wrap
+       
+		.pswp__container
+			.pswp__item
+			.pswp__item
+			.pswp__item
+
+		.pswp__ui.pswp__ui--hidden
+
+			.pswp__top-bar
+
+				.pswp__counter
+
+				button.pswp__button.pswp__button--close(title="Zavřít (Esc)")
+
+				button.pswp__button.pswp__button--share(title="Sdílet")
+
+				button.pswp__button.pswp__button--fs(title="Celá obrazovka")
+
+				button.pswp__button.pswp__button--zoom(title="Přiblížit/Oddálit")
+
+				.pswp__preloader
+					.pswp__preloader__icn
+						.pswp__preloader__cut
+							.pswp__preloader__donut
+
+
+			.pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+				.pswp__share-tooltip
+       
+
+			button.pswp__button.pswp__button--arrow--left(title="Předchozí")
+         
+
+			button.pswp__button.pswp__button--arrow--right(title="Další")
+       
+
+			.pswp__caption
+				.pswp__caption__center
