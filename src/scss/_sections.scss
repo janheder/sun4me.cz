@@ -163,10 +163,11 @@
     z-index: 2;
     position: relative;
     text-align: center;
+    margin: 0;
 }
 @media screen and (max-width:991px){
     .page-heading {
-        padding: 2rem 0;
+        padding: 7rem 0;
         text-align: center;
     }
     .page-heading__title{

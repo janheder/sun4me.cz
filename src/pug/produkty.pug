@@ -1,0 +1,97 @@
+doctype html
+html(lang="en")
+    head
+        include _variables.pug  
+        meta(charset="utf-8")
+        meta(content="IE=edge" http-equiv="X-UA-Compatible")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        title #{title}
+        meta(content="index,follow,snippet,archive" name="robots")
+        meta(content=metaDescription name="description")
+        meta(content=metaKeywords lang="cs" name="keywords")
+        meta(content=metaAuthor name="author")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
+
+        link(rel="canonical" href=metaURL)
+        meta(property="og:locale" content="cs_CZ")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content=title)
+        meta(property="og:description" content=metaDescription)
+        meta(property="og:url" content=metaURL)
+        meta(property="og:site_name" content=metaSitename)
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:site" content=metaTwitterName)
+        meta(name="twitter:title" content=title)
+        meta(name="twitter:description" content=metaDescription)
+        meta(name="twitter:image" content=metaTwitterImg)
+        include _css-include.pug  
+    body
+        include _nav.pug
+        section.page-heading.post__image-container
+            .container
+                h1.page-heading__title Kontakty
+            img.lazy.post__featured-image(src="img/lazy/lazy-thumb-page-contacts-large.jpg" data-src=URLbase+"img/thumb-page-contacts-large.jpg" alt="#" title="#")
+
+        include _breadcrumb.pug
+
+        main
+            .container
+                .print-area
+                    article
+                        .page-contact
+                            .row
+                                .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                                    .page-contact__col
+                                        h3.page-contact__title O společnosti
+                                        strong.page-contact__bold sun4me s.r.o.
+                                        p.page-contact__text Místecká 329/258
+                                        p.page-contact__text 720 00 Ostrava
+
+                                .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                                    .page-contact__col
+                                        h3.page-contact__title Kontaktní informace
+                                        p.page-contact__text IČO: 27781011
+                                        p.page-contact__text DIČ: CZ27781011
+                                        p.page-contact__text 8:00 hod - 15:00 hod
+                                        strong.page-contact__bold +420 704 538 399
+                                        strong.page-contact__bold info@sun4me.cz
+                                        
+                                .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                                    .img-gallery(itemscope itemtype="http://schema.org/ImageGallery")
+                                        figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                            a(href=URLbase+"img/certifikat-large.jpg" itemprop="contentUrl" data-size="1121x1585")
+                                                img.lazy(src=URLbase+"img/lazy/lazy-certifikat.jpg" data-src=URLbase+"img/certifikat.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                            figcaption(itemprop="caption description") Certifikát Victron Energy
+
+                            .page-contact__map
+                                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5152.763109379098!2d18.265948886747843!3d49.77888928017442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713fb32eec49ab3%3A0x5f258cef4e47f457!2ssun4me+s.r.o.!5e0!3m2!1scs!2scz!4v1519559806144" width="100%" height="360" frameborder="0" style="border:0" allowfullscreen)
+
+
+        include _news-section.pug
+
+        include _footer.pug
+
+        include _js-include.pug
+
+        script.
+            //SWIPER PRODUCT
+            var carousel_product = new Swiper('.swiper-container-product', {
+              lazy: true,
+              spaceBetween: 0,
+              grabCursor: true,
+              zoom: true,
+              loop: false,
+              pagination: {
+                el: '.swiper-pagination--product',
+                clickable: true,
+              },
+            navigation: {
+                nextEl: '.swiper-button-next--product',
+                prevEl: '.swiper-button-prev--product',
+                }
+            });
+
+
+        script.
+            initPhotoSwipeFromDOM('.img-gallery figure');
+

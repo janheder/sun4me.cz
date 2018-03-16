@@ -178,6 +178,7 @@
     }
     .navbar-dropdown__item{
         display: block;
+        border-bottom: 1px solid $border-primary;
     }
     body.active {
         overflow: hidden;
@@ -311,5 +312,9 @@
 @media screen and (max-width:991px){
     .navbar-main.scroll{
         height: 50px;
+
+        .navbar-dropdown{
+            top: 0px;
+        }
     }  
 }
