@@ -218,3 +218,84 @@
     @include flex-direction(row);
     @include justify-content(center);
 }
+
+
+
+/* ========================================================================== */
+/* PRODUCTS */
+/* ========================================================================== */
+
+.product-price{
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+    border-radius: $border-radius-main;
+    overflow: hidden;
+    margin: 4rem 0;
+}
+.product-price__cell{
+    @include flex-grow(1);
+    @include flex-basis(0);
+    padding: 3rem 2rem;
+    background: $bg-light;
+    border-right: 1px solid $border-primary;
+    text-align: center;
+}
+
+.product-price__subtitle{
+    font-size: 1.8rem;
+    color: $gray-disabled;
+    margin-bottom: 1.5rem;
+}
+.product-price__title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+.product-price__cell--final{
+    @include gradient(to right, $orange-alt, $yellow-main); 
+    border: 0;
+
+    & .product-price__title, & .product-price__subtitle{
+        color: $white;
+    }
+}
+@media screen and (max-width:768px){
+    .product-price{
+        @include flex-direction(column);
+    }
+    .product-price__cell{
+        border: 0;
+        border-bottom: 1px solid $border-primary;
+    }
+    .product-price__cell--final{
+        border: 0;
+    }
+}
+
+
+/*.product-table{}*/
+.product-table__title{
+    text-align: center;
+    font-size: 3.6rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+}
+.product-table__cell{
+    background: $white;
+    padding: 3rem 2rem;
+    border: 1px solid $border-primary;
+    text-align: center;
+    border-radius: $border-radius-main;
+}
+.product-table__content{
+    margin: 0;
+    font-size: 1.8rem;
+}
+@media screen and (max-width:991px){
+    .product-table__cell{
+        margin: 10px 0;
+    }
+}

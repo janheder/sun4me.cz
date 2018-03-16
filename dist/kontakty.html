@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -52,7 +52,7 @@
     <!-- Custom CSS-->
     <link href="css/style.css" rel="stylesheet">
     <!-- Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&amp;amp;subset=latin-ext" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')
       
@@ -108,22 +108,22 @@
       </div><img class="lazy post__featured-image" src="img/lazy/lazy-thumb-page-contacts-large.jpg" data-src="img/thumb-page-contacts-large.jpg" alt="#" title="#">
     </section>
     <nav class="breadcrumb">
-      <div class="container breadcrumb-container"><a class="breadcrumb-item" href="#">Lorem ipsum</a><a class="breadcrumb-item" href="#">Dolor sit amet</a><span class="breadcrumb-item active">Bootstrap</span></div>
+      <div class="container breadcrumb-container"><a class="breadcrumb-item" href="#">Lorem ipsum</a><a class="breadcrumb-item" href="#">Dolor sit amet</a><span class="breadcrumb-item active">Název stránky</span></div>
     </nav>
     <main>
       <div class="container">
         <div class="print-area">
-          <article>
+          <article class="page">
             <div class="page-contact">
               <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                   <div class="page-contact__col">
                     <h3 class="page-contact__title">O společnosti</h3><strong class="page-contact__bold">sun4me s.r.o.</strong>
                     <p class="page-contact__text">Místecká 329/258</p>
                     <p class="page-contact__text">720 00 Ostrava</p>
                   </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                   <div class="page-contact__col">
                     <h3 class="page-contact__title">Kontaktní informace</h3>
                     <p class="page-contact__text">IČO: 27781011</p>
@@ -131,7 +131,7 @@
                     <p class="page-contact__text">8:00 hod - 15:00 hod</p><strong class="page-contact__bold">+420 704 538 399</strong><strong class="page-contact__bold">info@sun4me.cz</strong>
                   </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                   <div class="img-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                     <figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"><a href="img/certifikat-large.jpg" itemprop="contentUrl" data-size="1121x1585"><img class="lazy" src="img/lazy/lazy-certifikat.jpg" data-src="img/certifikat.jpg" itemprop="thumbnail" alt="Image description" data-index="1"></a>
                       <figcaption itemprop="caption description">Certifikát Victron Energy</figcaption>
@@ -292,26 +292,5 @@
         </div>
       </div>
     </div>
-    <script>
-      //SWIPER PRODUCT
-      var carousel_product = new Swiper('.swiper-container-product', {
-        lazy: true,
-        spaceBetween: 0,
-        grabCursor: true,
-        zoom: true,
-        loop: false,
-        pagination: {
-          el: '.swiper-pagination--product',
-          clickable: true,
-        },
-      navigation: {
-          nextEl: '.swiper-button-next--product',
-          prevEl: '.swiper-button-prev--product',
-          }
-      });
-      
-      
-    </script>
-    <script>initPhotoSwipeFromDOM('.img-gallery figure');</script>
   </body>
 </html>

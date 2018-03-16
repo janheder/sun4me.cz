@@ -40,10 +40,10 @@ article{
     ARTICLE POST
 \*------------------------------------*/
 
-article.post{
+article.post, article.page{
     & p, & b, & i, & u, & a, & strong{
         font-family: $font-family-main;
-        line-height: 3.4rem;
+        line-height: 3.2rem;
         font-size: 1.8rem;
         font-weight: 400;
     }
@@ -63,11 +63,11 @@ article.post{
     } 
 }
 article{
-    &.post {
+    &.post, &.page {
         @for $index from 1 through 6 {
           & h#{$index}{
             line-height: 1.5;
-            font-weight: 600;
+            font-weight: 700;
             font-family: $font-family-alt;
           }
         }
@@ -143,65 +143,3 @@ article{
 }
 
 
-.order-history{
-    & h3{
-        padding-bottom: 1.5rem;
-        border-bottom: 2px solid #2b2f30;
-        margin: 0;
-        margin-bottom: 2.5rem;
-        font-size: 2.25rem;
-    }
-    & .login-form-toggler{
-        display: none;
-    }
-    & .order-history-single-wrap{
-        display: table;
-        width: 100%;
-    }
-    & .order-history-single{
-        display: table-row;
-
-        &.head p{
-            font-weight: 600;
-        }
-        & .order-history-single-col{
-            display: table-cell;
-            padding: 10px;
-            max-width: 200px;
-            border-bottom: 1px solid $border-primary;
-            & a{
-                display: block;
-            }
-            & p{
-                margin: 0;
-                line-height: 1.5;
-                margin: 5px 0;
-            }
-            & .price{
-                color: $red-main;
-                font-weight: 600;
-            }
-            & .status{
-                color: $green-main;
-                font-weight: 600;
-            }
-        }
-    }
-}
-@media screen and (max-width: 991px){
-    .order-history{
-        & h3{
-            display: none;
-        }
-        & .login-form-toggler{
-            display: block;
-            width: 100%;
-                margin: 10px 0;
-        }
-    }
-}
-@media screen and (min-width: 992px){
-    .order-history .collapse {
-        display: block;
-    }
-}

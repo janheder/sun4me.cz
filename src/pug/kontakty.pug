@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="cs")
     head
         include _variables.pug  
         meta(charset="utf-8")
@@ -37,17 +37,17 @@ html(lang="en")
         main
             .container
                 .print-area
-                    article
+                    article.page
                         .page-contact
                             .row
-                                .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                                .col-12.col-sm-12.col-md-4.col-lg-4.col-xl-4
                                     .page-contact__col
                                         h3.page-contact__title O společnosti
                                         strong.page-contact__bold sun4me s.r.o.
                                         p.page-contact__text Místecká 329/258
                                         p.page-contact__text 720 00 Ostrava
 
-                                .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                                .col-12.col-sm-12.col-md-4.col-lg-4.col-xl-4
                                     .page-contact__col
                                         h3.page-contact__title Kontaktní informace
                                         p.page-contact__text IČO: 27781011
@@ -56,7 +56,7 @@ html(lang="en")
                                         strong.page-contact__bold +420 704 538 399
                                         strong.page-contact__bold info@sun4me.cz
                                         
-                                .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                                .col-12.col-sm-12.col-md-4.col-lg-4.col-xl-4
                                     .img-gallery(itemscope itemtype="http://schema.org/ImageGallery")
                                         figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
                                             a(href=URLbase+"img/certifikat-large.jpg" itemprop="contentUrl" data-size="1121x1585")
@@ -72,26 +72,4 @@ html(lang="en")
         include _footer.pug
 
         include _js-include.pug
-
-        script.
-            //SWIPER PRODUCT
-            var carousel_product = new Swiper('.swiper-container-product', {
-              lazy: true,
-              spaceBetween: 0,
-              grabCursor: true,
-              zoom: true,
-              loop: false,
-              pagination: {
-                el: '.swiper-pagination--product',
-                clickable: true,
-              },
-            navigation: {
-                nextEl: '.swiper-button-next--product',
-                prevEl: '.swiper-button-prev--product',
-                }
-            });
-
-
-        script.
-            initPhotoSwipeFromDOM('.img-gallery figure');
 
